@@ -1,0 +1,13 @@
+{
+  "required": true,
+  "package": "net.legiblesleet827.platinum.mixin",
+  "compatibilityLevel": "JAVA_16",
+  "mixins": [
+    "ArmorItemMixin"
+  ],
+  "client": [],
+  "server": [],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}

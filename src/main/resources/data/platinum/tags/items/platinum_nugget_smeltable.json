@@ -1,0 +1,17 @@
+{
+  "replace": false,
+  "values": [
+    "platinum:raw_platinum_nugget",
+    "platinum:platinum_ore",
+    "platinum:deepslate_platinum_ore",
+    "platinum:platinum_sword",
+    "platinum:platinum_shovel",
+    "platinum:platinum_pickaxe",
+    "platinum:platinum_axe",
+    "platinum:platinum_hoe",
+    "platinum:platinum_helmet",
+    "platinum:platinum_chestplate",
+    "platinum:platinum_leggings",
+    "platinum:platinum_boots"
+  ]
+}

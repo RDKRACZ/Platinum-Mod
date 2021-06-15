@@ -1,0 +1,31 @@
+{
+  "schemaVersion": 1,
+  "id": "platinum",
+  "version": "${version}",
+  "name": "Platinum Mod",
+  "description": "This is a mod that adds platinum to minecraft",
+  "authors": [
+    "LegibleSleet827"
+  ],
+  "contributors": [],
+  "contact": {},
+  "license": "MIT",
+  "icon": "assets/platinum/icon.png",
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+      "net.legiblesleet827.platinum.PlatinumMod"
+    ],
+    "client": [],
+    "server": []
+  },
+  "mixins": [
+    "platinum.mixins.json"
+  ],
+  "depends": {
+    "fabricloader": ">=0.11.6",
+    "fabric": "*",
+    "minecraft": "1.17.x",
+    "java": ">=16"
+  }
+}

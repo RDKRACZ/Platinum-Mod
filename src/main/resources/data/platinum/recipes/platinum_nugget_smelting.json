@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:smelting",
+  "ingredient": {
+    "tag": "platinum:platinum_nugget_smeltable"
+  },
+  "result": "platinum:platinum_nugget",
+  "experience": 1.0,
+  "cookingtime": 200
+}
