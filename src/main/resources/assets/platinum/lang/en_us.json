@@ -1,4 +1,5 @@
 {
+  "itemGroup.platinum.platinum_group": "Platinum Mod Group",
   "item.platinum.platinum_ingot": "Platinum Ingot",
   "item.platinum.platinum_nugget": "Platinum Nugget",
   "item.platinum.raw_platinum_nugget": "Raw Platinum Nugget",
@@ -16,5 +17,6 @@
   "block.platinum.deepslate_platinum_ore": "Deepslate Platinum Ore",
   "block.platinum.platinum_block": "Block of Platinum",
   "block.platinum.raw_platinum_block": "Block of Raw Platinum",
-  "itemGroup.platinum.platinum_group": "Platinum Mod Group"
+  "advancements.platinum.root.title": "You finally found it...",
+  "advancements.platinum.root.description": "Get a raw platinum nugget"
 }

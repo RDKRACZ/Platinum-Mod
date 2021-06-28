@@ -5,7 +5,6 @@ import net.fabricmc.api.ModInitializer;
 import net.fabricmc.fabric.api.client.itemgroup.FabricItemGroupBuilder;
 import net.legiblesleet827.platinum.block.ModBlocks;
 import net.legiblesleet827.platinum.item.ModItems;
-// import net.legiblesleet827.platinum.world.OreGeneration;
 import net.legiblesleet827.platinum.world.OreGeneration;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ItemStack;
