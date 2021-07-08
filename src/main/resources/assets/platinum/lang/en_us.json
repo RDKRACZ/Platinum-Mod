@@ -14,9 +14,5 @@
   "item.platinum.platinum_axe": "Platinum Axe",
   "item.platinum.platinum_hoe": "Platinum Hoe",
   "block.platinum.platinum_ore": "Platinum Ore",
-  "block.platinum.deepslate_platinum_ore": "Deepslate Platinum Ore",
-  "block.platinum.platinum_block": "Block of Platinum",
-  "block.platinum.raw_platinum_block": "Block of Raw Platinum",
-  "advancements.platinum.root.title": "Platinum",
-  "advancements.platinum.root.description": "Get a platinum ingot"
+  "block.platinum.deepslate_platinum_ore": "Deepslate Platinum Ore"
 }
