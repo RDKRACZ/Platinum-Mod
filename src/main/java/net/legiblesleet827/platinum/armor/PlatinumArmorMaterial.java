@@ -9,7 +9,7 @@ import net.minecraft.sound.SoundEvents;
 
 public class PlatinumArmorMaterial implements ArmorMaterial {
     private static final int[] BASE_DURABILITY = new int[] {15, 20, 21, 15};
-    private static final int[] PROTECTION_VALUES = new int[] {5, 8, 10, 5};
+    private static final int[] PROTECTION_VALUES = new int[] {4, 7, 9, 4};
 
     @Override
     public int getDurability(EquipmentSlot slot) {

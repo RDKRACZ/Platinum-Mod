@@ -8,6 +8,8 @@ import net.legiblesleet827.platinum.item.ModItems;
 import net.legiblesleet827.platinum.world.OreGeneration;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ItemStack;
+import net.minecraft.resource.ServerResourceManager;
+import net.minecraft.server.MinecraftServer;
 import net.minecraft.util.Identifier;
 import org.apache.logging.log4j.Level;
 import org.apache.logging.log4j.LogManager;
@@ -36,5 +38,9 @@ public class PlatinumMod implements ModInitializer {
 
     public static void log(Level level, String message){
         LOGGER.log(level, "["+MOD_NAME+"] " + message);
+    }
+
+    private static void DatapackReload(MinecraftServer minecraftServer, ServerResourceManager serverResourceManager, boolean b) {
+        minecraftServer.getDataPackManager().hasProfile("CavesAndCliffsPreview.zip");
     }
 }

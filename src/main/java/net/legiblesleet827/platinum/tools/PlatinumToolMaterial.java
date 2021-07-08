@@ -19,7 +19,7 @@ public class PlatinumToolMaterial implements ToolMaterial {
 
     @Override
     public float getAttackDamage() {
-        return 12.0F;
+        return 6.0F;
     }
 
     @Override
