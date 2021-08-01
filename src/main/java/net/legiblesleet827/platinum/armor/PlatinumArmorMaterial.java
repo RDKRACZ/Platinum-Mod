@@ -1,39 +1,39 @@
 package net.legiblesleet827.platinum.armor;
 
 import net.legiblesleet827.platinum.item.ModItems;
-import net.minecraft.entity.EquipmentSlot;
-import net.minecraft.item.ArmorMaterial;
-import net.minecraft.recipe.Ingredient;
-import net.minecraft.sound.SoundEvent;
-import net.minecraft.sound.SoundEvents;
+import net.minecraft.sounds.SoundEvent;
+import net.minecraft.sounds.SoundEvents;
+import net.minecraft.world.entity.EquipmentSlot;
+import net.minecraft.world.item.ArmorMaterial;
+import net.minecraft.world.item.crafting.Ingredient;
 
 public class PlatinumArmorMaterial implements ArmorMaterial {
-    private static final int[] BASE_DURABILITY = new int[] {15, 20, 21, 15};
-    private static final int[] PROTECTION_VALUES = new int[] {4, 7, 9, 4};
+    private static final int[] BASE_DURABILITY = new int[]{13, 15, 16, 11};
+    private static final int[] PROTECTION_VALUES = new int[]{4, 7, 9, 4};
 
     @Override
-    public int getDurability(EquipmentSlot slot) {
-        return BASE_DURABILITY[slot.getEntitySlotId()] * 40;
+    public int getDurabilityForSlot(EquipmentSlot slot) {
+        return BASE_DURABILITY[slot.getIndex()] * 40;
     }
 
     @Override
-    public int getProtectionAmount(EquipmentSlot slot) {
-        return PROTECTION_VALUES[slot.getEntitySlotId()];
+    public int getDefenseForSlot(EquipmentSlot slot) {
+        return PROTECTION_VALUES[slot.getIndex()];
     }
 
     @Override
-    public int getEnchantability() {
+    public int getEnchantmentValue() {
         return 15;
     }
 
     @Override
     public SoundEvent getEquipSound() {
-        return SoundEvents.ITEM_ARMOR_EQUIP_GENERIC;
+        return SoundEvents.ARMOR_EQUIP_GENERIC;
     }
 
     @Override
     public Ingredient getRepairIngredient() {
-        return Ingredient.ofItems(ModItems.PLATINUM_INGOT);
+        return Ingredient.of(ModItems.PLATINUM_INGOT);
     }
 
     @Override
@@ -43,7 +43,7 @@ public class PlatinumArmorMaterial implements ArmorMaterial {
 
     @Override
     public float getToughness() {
-        return 20;
+        return 5;
     }
 
     @Override

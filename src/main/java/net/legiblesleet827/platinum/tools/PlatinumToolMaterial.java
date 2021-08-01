@@ -1,39 +1,39 @@
 package net.legiblesleet827.platinum.tools;
 
 import net.legiblesleet827.platinum.item.ModItems;
-import net.minecraft.item.ToolMaterial;
-import net.minecraft.recipe.Ingredient;
+import net.minecraft.world.item.Tier;
+import net.minecraft.world.item.crafting.Ingredient;
 
-public class PlatinumToolMaterial implements ToolMaterial {
+public class PlatinumToolMaterial implements Tier {
     public static final PlatinumToolMaterial INSTANCE = new PlatinumToolMaterial();
 
     @Override
-    public int getDurability() {
+    public int getUses() {
         return 3000;
     }
 
     @Override
-    public float getMiningSpeedMultiplier() {
-        return 15.0F;
+    public float getSpeed() {
+        return 9.0F;
     }
 
     @Override
-    public float getAttackDamage() {
-        return 6.0F;
+    public float getAttackDamageBonus() {
+        return 10.0F;
     }
 
     @Override
-    public int getMiningLevel() {
+    public int getLevel() {
         return 4;
     }
 
     @Override
-    public int getEnchantability() {
+    public int getEnchantmentValue() {
         return 20;
     }
 
     @Override
     public Ingredient getRepairIngredient() {
-        return Ingredient.ofItems(ModItems.PLATINUM_INGOT);
+        return Ingredient.of(ModItems.PLATINUM_INGOT);
     }
 }

@@ -1,10 +1,10 @@
 package net.legiblesleet827.platinum.tools;
 
-import net.minecraft.item.HoeItem;
-import net.minecraft.item.ToolMaterial;
+import net.minecraft.world.item.HoeItem;
+import net.minecraft.world.item.Tier;
 
 public class PlatinumHoe extends HoeItem {
-    public PlatinumHoe(ToolMaterial material, int attackDamage, float attackSpeed, Settings settings) {
+    public PlatinumHoe(Tier material, int attackDamage, float attackSpeed, Properties settings) {
         super(material, attackDamage, attackSpeed, settings);
     }
 }
