@@ -23,13 +23,13 @@ import java.util.UUID;
 @Mixin(ArmorItem.class)
 public abstract class ArmorItemMixin {
 
-    @Shadow @Final private static UUID[] MODIFIERS;
+    @Shadow @Final private static UUID[] ARMOR_MODIFIER_UUID_PER_SLOT;
     @Shadow @Final @Mutable private Multimap<Attribute, AttributeModifier> attributeModifiers;
     @Shadow @Final protected float knockbackResistance;
 
     @Inject(method = "<init>", at = @At(value = "RETURN"))
     private void constructor(ArmorMaterial material, EquipmentSlot slot, Item.Properties settings, CallbackInfo ci) {
-        UUID uUID = MODIFIERS[slot.getIndex()];
+        UUID uUID = ARMOR_MODIFIER_UUID_PER_SLOT[slot.getIndex()];
 
         if (material == ModItems.platinumArmorMaterial) {
             ImmutableMultimap.Builder<Attribute, AttributeModifier> builder = ImmutableMultimap.builder();
