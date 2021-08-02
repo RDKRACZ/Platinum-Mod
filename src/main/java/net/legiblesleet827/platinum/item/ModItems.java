@@ -10,24 +10,21 @@ import net.legiblesleet827.platinum.tools.PlatinumToolMaterial;
 import net.minecraft.core.Registry;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.entity.EquipmentSlot;
-import net.minecraft.world.item.ArmorItem;
-import net.minecraft.world.item.ShovelItem;
-import net.minecraft.world.item.SwordItem;
-import net.minecraft.world.item.TieredItem;
+import net.minecraft.world.item.*;
 
 public class ModItems {
-    public static final net.minecraft.world.item.ArmorMaterial platinumArmorMaterial = new PlatinumArmorMaterial();
+    public static final ArmorMaterial platinumArmorMaterial = new PlatinumArmorMaterial();
 
-    public static final net.minecraft.world.item.Item PLATINUM_INGOT = new net.minecraft.world.item.Item(new FabricItemSettings().tab(PlatinumMod.PLATINUM_GROUP));
-    public static final net.minecraft.world.item.Item PLATINUM_NUGGET = new net.minecraft.world.item.Item(new FabricItemSettings().tab(PlatinumMod.PLATINUM_GROUP));
-    public static final net.minecraft.world.item.Item RAW_PLATINUM_NUGGET = new net.minecraft.world.item.Item(new FabricItemSettings().tab(PlatinumMod.PLATINUM_GROUP));
-    public static final net.minecraft.world.item.Item RAW_PLATINUM_INGOT = new net.minecraft.world.item.Item(new FabricItemSettings().tab(PlatinumMod.PLATINUM_GROUP));
+    public static final Item PLATINUM_INGOT = new Item(new FabricItemSettings().tab(PlatinumMod.PLATINUM_GROUP));
+    public static final Item PLATINUM_NUGGET = new Item(new FabricItemSettings().tab(PlatinumMod.PLATINUM_GROUP));
+    public static final Item RAW_PLATINUM_NUGGET = new Item(new FabricItemSettings().tab(PlatinumMod.PLATINUM_GROUP));
+    public static final Item RAW_PLATINUM_INGOT = new Item(new FabricItemSettings().tab(PlatinumMod.PLATINUM_GROUP));
 
     // Armor
-    public static final net.minecraft.world.item.Item PLATINUM_HELMET = new ArmorItem(platinumArmorMaterial, EquipmentSlot.HEAD, new FabricItemSettings().tab(PlatinumMod.PLATINUM_GROUP));
-    public static final net.minecraft.world.item.Item PLATINUM_CHESTPLATE = new ArmorItem(platinumArmorMaterial, EquipmentSlot.CHEST, new FabricItemSettings().tab(PlatinumMod.PLATINUM_GROUP));
-    public static final net.minecraft.world.item.Item PLATINUM_LEGGINGS = new ArmorItem(platinumArmorMaterial, EquipmentSlot.LEGS, new FabricItemSettings().tab(PlatinumMod.PLATINUM_GROUP));
-    public static final net.minecraft.world.item.Item PLATINUM_BOOTS = new ArmorItem(platinumArmorMaterial, EquipmentSlot.FEET, new FabricItemSettings().tab(PlatinumMod.PLATINUM_GROUP));
+    public static final Item PLATINUM_HELMET = new ArmorItem(platinumArmorMaterial, EquipmentSlot.HEAD, new FabricItemSettings().tab(PlatinumMod.PLATINUM_GROUP));
+    public static final Item PLATINUM_CHESTPLATE = new ArmorItem(platinumArmorMaterial, EquipmentSlot.CHEST, new FabricItemSettings().tab(PlatinumMod.PLATINUM_GROUP));
+    public static final Item PLATINUM_LEGGINGS = new ArmorItem(platinumArmorMaterial, EquipmentSlot.LEGS, new FabricItemSettings().tab(PlatinumMod.PLATINUM_GROUP));
+    public static final Item PLATINUM_BOOTS = new ArmorItem(platinumArmorMaterial, EquipmentSlot.FEET, new FabricItemSettings().tab(PlatinumMod.PLATINUM_GROUP));
 
     // Tools
     public static TieredItem PLATINUM_SWORD = new SwordItem(PlatinumToolMaterial.INSTANCE, 3, -2.4F, new FabricItemSettings().tab(PlatinumMod.PLATINUM_GROUP));
