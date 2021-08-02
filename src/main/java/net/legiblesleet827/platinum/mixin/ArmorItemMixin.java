@@ -24,7 +24,7 @@ import java.util.UUID;
 public abstract class ArmorItemMixin {
 
     @Shadow @Final private static UUID[] ARMOR_MODIFIER_UUID_PER_SLOT;
-    @Shadow @Final @Mutable private Multimap<Attribute, AttributeModifier> attributeModifiers;
+    @Shadow @Final @Mutable private Multimap<Attribute, AttributeModifier> defaultModifiers;
     @Shadow @Final protected float knockbackResistance;
 
     @Inject(method = "<init>", at = @At(value = "RETURN"))
@@ -34,7 +34,7 @@ public abstract class ArmorItemMixin {
         if (material == ModItems.platinumArmorMaterial) {
             ImmutableMultimap.Builder<Attribute, AttributeModifier> builder = ImmutableMultimap.builder();
 
-            this.attributeModifiers.forEach(builder::put);
+            this.defaultModifiers.forEach(builder::put);
 
             builder.put(
                     Attributes.KNOCKBACK_RESISTANCE,
@@ -45,7 +45,7 @@ public abstract class ArmorItemMixin {
                     )
             );
 
-            this.attributeModifiers = builder.build();
+            this.defaultModifiers = builder.build();
         }
     }
 
