@@ -1,39 +1,39 @@
 package net.legiblesleet827.platinum.armor;
 
 import net.legiblesleet827.platinum.item.ModItems;
-import net.minecraft.sounds.SoundEvent;
-import net.minecraft.sounds.SoundEvents;
-import net.minecraft.world.entity.EquipmentSlot;
-import net.minecraft.world.item.ArmorMaterial;
-import net.minecraft.world.item.crafting.Ingredient;
+import net.minecraft.entity.EquipmentSlot;
+import net.minecraft.item.ArmorMaterial;
+import net.minecraft.recipe.Ingredient;
+import net.minecraft.sound.SoundEvent;
+import net.minecraft.sound.SoundEvents;
 
 public class PlatinumArmorMaterial implements ArmorMaterial {
-    private static final int[] BASE_DURABILITY = new int[]{13, 15, 16, 11};
-    private static final int[] PROTECTION_VALUES = new int[]{4, 7, 9, 4};
+    private static final int[] BASE_DURABILITY = new int[]{15, 20, 20, 15};
+    private static final int[] PROTECTION_VALUES = new int[]{5, 10, 10, 5};
 
     @Override
-    public int getDurabilityForSlot(EquipmentSlot slot) {
-        return BASE_DURABILITY[slot.getIndex()] * 40;
+    public int getDurability(EquipmentSlot slot) {
+        return BASE_DURABILITY[slot.getEntitySlotId()] * 40;
     }
 
     @Override
-    public int getDefenseForSlot(EquipmentSlot slot) {
-        return PROTECTION_VALUES[slot.getIndex()];
+    public int getProtectionAmount(EquipmentSlot slot) {
+        return PROTECTION_VALUES[slot.getEntitySlotId()];
     }
 
     @Override
-    public int getEnchantmentValue() {
+    public int getEnchantability() {
         return 15;
     }
 
     @Override
     public SoundEvent getEquipSound() {
-        return SoundEvents.ARMOR_EQUIP_GENERIC;
+        return SoundEvents.ITEM_ARMOR_EQUIP_GENERIC;
     }
 
     @Override
     public Ingredient getRepairIngredient() {
-        return Ingredient.of(ModItems.PLATINUM_INGOT);
+        return Ingredient.ofItems(ModItems.PLATINUM_INGOT);
     }
 
     @Override
@@ -48,6 +48,6 @@ public class PlatinumArmorMaterial implements ArmorMaterial {
 
     @Override
     public float getKnockbackResistance() {
-        return 0.2F;
+        return 0.5F;
     }
 }

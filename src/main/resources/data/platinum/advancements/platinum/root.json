@@ -1,0 +1,37 @@
+{
+  "display": {
+    "icon": {
+      "item": "platinum:platinum_ingot"
+    },
+    "title": {
+      "translate": "advancements.platinum.root.title"
+    },
+    "description": {
+      "translate": "advancements.platinum.root.description"
+    },
+    "background": "minecraft:textures/gui/advancements/backgrounds/stone.png",
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "platinum": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "platinum:platinum_ingot"
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "platinum"
+    ]
+  ]
+}

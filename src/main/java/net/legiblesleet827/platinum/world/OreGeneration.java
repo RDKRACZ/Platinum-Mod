@@ -2,49 +2,49 @@ package net.legiblesleet827.platinum.world;
 
 import net.legiblesleet827.platinum.PlatinumMod;
 import net.legiblesleet827.platinum.block.ModBlocks;
-import net.minecraft.core.Registry;
-import net.minecraft.data.BuiltinRegistries;
-import net.minecraft.resources.ResourceKey;
-import net.minecraft.resources.ResourceLocation;
-import net.minecraft.world.level.levelgen.VerticalAnchor;
-import net.minecraft.world.level.levelgen.feature.ConfiguredFeature;
-import net.minecraft.world.level.levelgen.feature.Feature;
-import net.minecraft.world.level.levelgen.feature.configurations.OreConfiguration;
-import net.minecraft.world.level.levelgen.feature.configurations.RangeDecoratorConfiguration;
-import net.minecraft.world.level.levelgen.heightproviders.UniformHeight;
-import net.minecraft.world.level.levelgen.placement.RangeDecorator;
+import net.minecraft.util.Identifier;
+import net.minecraft.util.registry.BuiltinRegistries;
+import net.minecraft.util.registry.Registry;
+import net.minecraft.util.registry.RegistryKey;
+import net.minecraft.world.gen.YOffset;
+import net.minecraft.world.gen.decorator.RangeDecorator;
+import net.minecraft.world.gen.decorator.RangeDecoratorConfig;
+import net.minecraft.world.gen.feature.ConfiguredFeature;
+import net.minecraft.world.gen.feature.Feature;
+import net.minecraft.world.gen.feature.OreFeatureConfig;
+import net.minecraft.world.gen.heightprovider.UniformHeightProvider;
 
 public class OreGeneration {
     public static ConfiguredFeature<?, ?> ORE_PLATINUM_OVERWORLD = Feature.ORE
-            .configured(new OreConfiguration(
-                    OreConfiguration.Predicates.NATURAL_STONE,
-                    ModBlocks.PLATINUM_ORE.defaultBlockState(),
+            .configure(new OreFeatureConfig(
+                    OreFeatureConfig.Rules.BASE_STONE_OVERWORLD,
+                    ModBlocks.PLATINUM_ORE.getDefaultState(),
                     1))
-            .decorated(RangeDecorator.RANGE.configured(new RangeDecoratorConfiguration(UniformHeight.of(
-                    VerticalAnchor.absolute(20),
-                    VerticalAnchor.absolute(0)
+            .decorate(RangeDecorator.RANGE.configure(new RangeDecoratorConfig(UniformHeightProvider.create(
+                    YOffset.fixed(20),
+                    YOffset.fixed(0)
             )))
-            .squared()
-            .count(1));
+            .spreadHorizontally()
+            .repeat(1));
 
     public static ConfiguredFeature<?, ?> DEEPSLATE_ORE_PLATINUM_OVERWORLD = Feature.ORE
-            .configured(new OreConfiguration(
-                    OreConfiguration.Predicates.DEEPSLATE_ORE_REPLACEABLES,
-                    ModBlocks.DEEPSLATE_PLATINUM_ORE.defaultBlockState(),
+            .configure(new OreFeatureConfig(
+                    OreFeatureConfig.Rules.DEEPSLATE_ORE_REPLACEABLES,
+                    ModBlocks.DEEPSLATE_PLATINUM_ORE.getDefaultState(),
                     3))
-            .decorated(RangeDecorator.RANGE.configured(new RangeDecoratorConfiguration(UniformHeight.of(
-                    VerticalAnchor.absolute(20),
-                    VerticalAnchor.absolute(0)
+            .decorate(RangeDecorator.RANGE.configure(new RangeDecoratorConfig(UniformHeightProvider.create(
+                    YOffset.fixed(20),
+                    YOffset.fixed(0)
             )))
-            .squared()
-            .count(1));
+            .spreadHorizontally()
+            .repeat(1));
 
     public static void register() {
-        ResourceKey<ConfiguredFeature<?, ?>> orePlatinumOverworld = ResourceKey.create(Registry.CONFIGURED_FEATURE_REGISTRY,
-                new ResourceLocation(PlatinumMod.MOD_ID, "ore_platinum_overworld"));
-        ResourceKey<ConfiguredFeature<?, ?>> deepslateOrePlatinumOverworld = ResourceKey.create(Registry.CONFIGURED_FEATURE_REGISTRY,
-                new ResourceLocation(PlatinumMod.MOD_ID, "deepslate_ore_platinum_overworld"));
-        Registry.register(BuiltinRegistries.CONFIGURED_FEATURE, orePlatinumOverworld.location(), ORE_PLATINUM_OVERWORLD);
-        Registry.register(BuiltinRegistries.CONFIGURED_FEATURE, deepslateOrePlatinumOverworld.location(), DEEPSLATE_ORE_PLATINUM_OVERWORLD);
+        RegistryKey<ConfiguredFeature<?, ?>> orePlatinumOverworld = RegistryKey.of(Registry.CONFIGURED_FEATURE_KEY,
+                new Identifier(PlatinumMod.MOD_ID, "ore_platinum_overworld"));
+        RegistryKey<ConfiguredFeature<?, ?>> deepslateOrePlatinumOverworld = RegistryKey.of(Registry.CONFIGURED_FEATURE_KEY,
+                new Identifier(PlatinumMod.MOD_ID, "deepslate_ore_platinum_overworld"));
+        Registry.register(BuiltinRegistries.CONFIGURED_FEATURE, orePlatinumOverworld.getValue(), ORE_PLATINUM_OVERWORLD);
+        Registry.register(BuiltinRegistries.CONFIGURED_FEATURE, deepslateOrePlatinumOverworld.getValue(), DEEPSLATE_ORE_PLATINUM_OVERWORLD);
     }
 }
