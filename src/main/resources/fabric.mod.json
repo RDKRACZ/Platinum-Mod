@@ -3,12 +3,16 @@
   "id": "platinum",
   "version": "${version}",
   "name": "Platinum Mod",
-  "description": "This is a mod that adds platinum to minecraft",
+  "description": "Adds platinum to minecraft",
   "authors": [
     "LegibleSleet827"
   ],
   "contributors": [],
-  "contact": {},
+  "contact": {
+    "homepage": "https://www.curseforge.com/minecraft/mc-mods/platinum-mod",
+    "sources": "https://github.com/hackcoder1000/Platinum-Mod",
+    "issues": "https://github.com/hackcoder1000/Platinum-Mod/issues"
+  },
   "license": "MIT",
   "icon": "assets/platinum/icon.png",
   "environment": "*",
