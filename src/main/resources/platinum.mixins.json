@@ -3,9 +3,7 @@
   "package": "net.legiblesleet827.platinum.mixin",
   "compatibilityLevel": "JAVA_16",
   "mixins": [
-    "ArmorItemMixin",
-    "DefaultBiomeFeaturesMixin",
-    "MiningToolItemMixin"
+    "ArmorItemMixin"
   ],
   "client": [],
   "server": [],
