@@ -14,7 +14,7 @@ public class PlatinumToolMaterial implements ToolMaterial {
 
     @Override
     public float getMiningSpeedMultiplier() {
-        return 10.0F;
+        return 8.0F;
     }
 
     @Override

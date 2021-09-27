@@ -8,12 +8,12 @@ import net.minecraft.sound.SoundEvent;
 import net.minecraft.sound.SoundEvents;
 
 public class PlatinumArmorMaterial implements ArmorMaterial {
-    private static final int[] BASE_DURABILITY = new int[]{15, 20, 20, 15};
+    private static final int[] BASE_DURABILITY = new int[]{13, 17, 17, 13};
     private static final int[] PROTECTION_VALUES = new int[]{5, 10, 10, 5};
 
     @Override
     public int getDurability(EquipmentSlot slot) {
-        return BASE_DURABILITY[slot.getEntitySlotId()] * 40;
+        return BASE_DURABILITY[slot.getEntitySlotId()] * 38;
     }
 
     @Override
