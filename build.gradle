@@ -1,7 +1,6 @@
 plugins {
     id 'fabric-loom' version '0.9-SNAPSHOT'
     id 'maven-publish'
-    id "com.matthewprenger.cursegradle" version "1.4.0"
 }
 
 sourceCompatibility = JavaVersion.VERSION_16
@@ -62,29 +61,5 @@ publishing {
     }
 
     repositories {
-    }
-}
-
-curseforge {
-    apiKey = project.hasProperty("curseForgeApiKey") ? project.curseForgeApiKey : ""
-    project {
-        id = project.id
-        releaseType = project.releaseType
-        changelogType = "markdown"
-        changelog = file("CHANGELOG.md")
-        addGameVersion "Fabric"
-        addGameVersion project.minecraft_version
-        addGameVersion "Java 16"
-
-        relations {
-            requiredLibrary 'fabric'
-        }
-        afterEvaluate {
-            mainArtifact(remapJar)
-            uploadTask.dependsOn(remapJar)
-        }
-    }
-    options {
-        forgeGradleIntegration = false
     }
 }
