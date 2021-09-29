@@ -24,8 +24,8 @@ public class OreGeneration {
                     ModBlocks.PLATINUM_ORE.getDefaultState(),
                     3))
             .decorate(RangeDecorator.RANGE.configure(new RangeDecoratorConfig(UniformHeightProvider.create(
-                    YOffset.fixed(20),
-                    YOffset.fixed(0)
+                    YOffset.fixed(0),
+                    YOffset.fixed(20)
             )))
             .spreadHorizontally()
             .repeat(3));
@@ -36,8 +36,8 @@ public class OreGeneration {
                     ModBlocks.DEEPSLATE_PLATINUM_ORE.getDefaultState(),
                     3))
             .decorate(RangeDecorator.RANGE.configure(new RangeDecoratorConfig(UniformHeightProvider.create(
-                    YOffset.fixed(20),
-                    YOffset.fixed(0)
+                    YOffset.fixed(0),
+                    YOffset.fixed(20)
             )))
             .spreadHorizontally()
             .repeat(3));
