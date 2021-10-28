@@ -46,17 +46,6 @@
             }
           ]
         }
-      ],
-      "conditions": [
-        {
-          "condition": "minecraft:match_tool",
-          "predicate": {
-            "items": [
-              "minecraft:netherite_pickaxe",
-              "platinum:platinum_pickaxe"
-            ]
-          }
-        }
       ]
     }
   ]

@@ -28,7 +28,7 @@ public class OreGeneration {
                     YOffset.fixed(20)
             )))
             .spreadHorizontally()
-            .repeat(3));
+            .repeat(5));
 
     public static ConfiguredFeature<?, ?> DEEPSLATE_ORE_PLATINUM_OVERWORLD = Feature.ORE
             .configure(new OreFeatureConfig(
@@ -40,7 +40,7 @@ public class OreGeneration {
                     YOffset.fixed(20)
             )))
             .spreadHorizontally()
-            .repeat(3));
+            .repeat(5));
 
     public static void register() {
         RegistryKey<ConfiguredFeature<?, ?>> orePlatinumOverworld = RegistryKey.of(Registry.CONFIGURED_FEATURE_KEY,

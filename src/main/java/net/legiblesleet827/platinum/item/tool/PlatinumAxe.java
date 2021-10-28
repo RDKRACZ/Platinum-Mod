@@ -1,4 +1,4 @@
-package net.legiblesleet827.platinum.tool;
+package net.legiblesleet827.platinum.item.tool;
 
 import net.minecraft.item.AxeItem;
 import net.minecraft.item.ToolMaterial;

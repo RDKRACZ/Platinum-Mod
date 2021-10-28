@@ -2,11 +2,11 @@ package net.legiblesleet827.platinum.item;
 
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.legiblesleet827.platinum.PlatinumMod;
-import net.legiblesleet827.platinum.armor.PlatinumArmorMaterial;
-import net.legiblesleet827.platinum.tool.PlatinumAxe;
-import net.legiblesleet827.platinum.tool.PlatinumHoe;
-import net.legiblesleet827.platinum.tool.PlatinumPickaxe;
-import net.legiblesleet827.platinum.tool.PlatinumToolMaterial;
+import net.legiblesleet827.platinum.item.armor.PlatinumArmorMaterial;
+import net.legiblesleet827.platinum.item.tool.PlatinumAxe;
+import net.legiblesleet827.platinum.item.tool.PlatinumHoe;
+import net.legiblesleet827.platinum.item.tool.PlatinumPickaxe;
+import net.legiblesleet827.platinum.item.tool.PlatinumToolMaterial;
 import net.minecraft.entity.EquipmentSlot;
 import net.minecraft.item.ArmorItem;
 import net.minecraft.item.ArmorMaterial;
