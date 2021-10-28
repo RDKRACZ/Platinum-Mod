@@ -1,4 +1,4 @@
-package net.legiblesleet827.platinum.tool;
+package net.legiblesleet827.platinum.item.tool;
 
 import net.legiblesleet827.platinum.item.ModItems;
 import net.minecraft.item.ToolMaterial;
@@ -14,7 +14,7 @@ public class PlatinumToolMaterial implements ToolMaterial {
 
     @Override
     public float getMiningSpeedMultiplier() {
-        return 8.0F;
+        return 15.0F;
     }
 
     @Override

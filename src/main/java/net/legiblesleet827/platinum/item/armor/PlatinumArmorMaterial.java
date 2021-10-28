@@ -1,4 +1,4 @@
-package net.legiblesleet827.platinum.armor;
+package net.legiblesleet827.platinum.item.armor;
 
 import net.legiblesleet827.platinum.item.ModItems;
 import net.minecraft.entity.EquipmentSlot;
@@ -8,8 +8,8 @@ import net.minecraft.sound.SoundEvent;
 import net.minecraft.sound.SoundEvents;
 
 public class PlatinumArmorMaterial implements ArmorMaterial {
-    private static final int[] BASE_DURABILITY = new int[]{13, 17, 17, 13};
-    private static final int[] PROTECTION_VALUES = new int[]{5, 10, 10, 5};
+    private static final int[] BASE_DURABILITY = new int[]{15, 20, 20, 15};
+    private static final int[] PROTECTION_VALUES = new int[]{10, 20, 20, 10};
 
     @Override
     public int getDurability(EquipmentSlot slot) {
@@ -43,7 +43,7 @@ public class PlatinumArmorMaterial implements ArmorMaterial {
 
     @Override
     public float getToughness() {
-        return 5;
+        return 10;
     }
 
     @Override
